@@ -280,5 +280,20 @@ namespace SlnPuntoVenta.Presentacion
         {
 
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcionFA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

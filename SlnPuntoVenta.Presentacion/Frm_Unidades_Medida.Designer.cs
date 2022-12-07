@@ -173,13 +173,14 @@ namespace SlnPuntoVenta.Presentacion
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // btnRetornar
             // 
             this.btnRetornar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnRetornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetornar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRetornar.Location = new System.Drawing.Point(260, 68);
+            this.btnRetornar.Location = new System.Drawing.Point(301, 68);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(80, 27);
             this.btnRetornar.TabIndex = 6;
@@ -193,7 +194,7 @@ namespace SlnPuntoVenta.Presentacion
             this.btnGuardar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(174, 68);
+            this.btnGuardar.Location = new System.Drawing.Point(215, 68);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 27);
             this.btnGuardar.TabIndex = 5;
@@ -207,7 +208,7 @@ namespace SlnPuntoVenta.Presentacion
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(88, 68);
+            this.btnCancelar.Location = new System.Drawing.Point(129, 68);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 27);
             this.btnCancelar.TabIndex = 4;
@@ -218,20 +219,22 @@ namespace SlnPuntoVenta.Presentacion
             // 
             // txtDescripcionFA
             // 
-            this.txtDescripcionFA.Location = new System.Drawing.Point(88, 32);
+            this.txtDescripcionFA.Location = new System.Drawing.Point(129, 32);
             this.txtDescripcionFA.Name = "txtDescripcionFA";
             this.txtDescripcionFA.ReadOnly = true;
             this.txtDescripcionFA.Size = new System.Drawing.Size(252, 20);
             this.txtDescripcionFA.TabIndex = 1;
+            this.txtDescripcionFA.TextChanged += new System.EventHandler(this.txtDescripcionFA_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 39);
+            this.label2.Location = new System.Drawing.Point(6, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Punto Venta (*)";
+            this.label2.Text = "Unidades de Medida (*)";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnSalir
             // 
@@ -363,7 +366,7 @@ namespace SlnPuntoVenta.Presentacion
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnActualizar);
             this.Name = "Frm_Unidades_Medida";
-            this.Text = "UNIDADES DE MEDIDA";
+            this.Text = "Unidades de Medida";
             this.Load += new System.EventHandler(this.Frm_Marcas_Load);
             this.tabControlPrincipal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
