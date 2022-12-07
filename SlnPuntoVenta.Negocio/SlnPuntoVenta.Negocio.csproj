@@ -44,6 +44,7 @@
     <Compile Include="Neg_Familias.cs" />
     <Compile Include="Neg_Marcas.cs" />
     <Compile Include="Neg_Punto_Venta.cs" />
+    <Compile Include="Neg_UnidadesMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

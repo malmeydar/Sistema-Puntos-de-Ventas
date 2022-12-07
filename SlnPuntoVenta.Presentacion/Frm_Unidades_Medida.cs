@@ -32,11 +32,11 @@ namespace SlnPuntoVenta.Presentacion
             dgv_Listado.Columns[1].Width = 350;
             dgv_Listado.Columns[1].HeaderText = "UNIDAD DE MEDIDAS";
         }
-        private void ListadoMA(string Ctext)
+        private void ListadoUM(string Ctext)
         {
             try
             {
-                dgv_Listado.DataSource = Neg_Marcas.ListarMarcas(Ctext);
+                dgv_Listado.DataSource = Neg_UnidadesMedida.ListarUnidadesMedida(Ctext);
                 this.FormatoDGVPV();
                 lblTotalRegistros.Text = "Total de registros: " + dgv_Listado.Rows.Count.ToString();
 
@@ -81,15 +81,15 @@ namespace SlnPuntoVenta.Presentacion
 
         private void SeleccionarItem()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dgv_Listado.CurrentRow.Cells["CodigoMA"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dgv_Listado.CurrentRow.Cells["CodigoUM"].Value)))
             {
                 MessageBox.Show("Seleciona un registro..!", "Aviso del Sistema", 
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
             }else
             {
-                this.nCodigo = Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoMA"].Value);
-                txtDescripcionFA.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionMA"].Value);
+                this.nCodigo = Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoUM"].Value);
+                txtDescripcionFA.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionUM"].Value);
 
             }
 
@@ -98,7 +98,7 @@ namespace SlnPuntoVenta.Presentacion
         #endregion
         private void Frm_Marcas_Load(object sender, EventArgs e)
         {
-            this.ListadoMA("%");
+            this.ListadoUM("%");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace SlnPuntoVenta.Presentacion
         private void btnRetornar_Click(object sender, EventArgs e)
         {
             tabControlPrincipal.SelectedIndex = 0;
-            this.ListadoMA("%");
+            this.ListadoUM("%");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -147,10 +147,10 @@ namespace SlnPuntoVenta.Presentacion
                 }else
                 {
                     string Rpta = "";
-                    Ent_Marcas objMarcas = new Ent_Marcas();
-                    objMarcas.CodigoMA= this.nCodigo;
-                    objMarcas.DescripcionMA = txtDescripcionFA.Text.Trim();
-                    Rpta = Neg_Marcas.GuardarMA(this.EstadoGuarda, objMarcas);
+                    Ent_UnidadesMedida objUnidadesMedida = new Ent_UnidadesMedida();
+                    objUnidadesMedida.CodigoUM= this.nCodigo;
+                    objUnidadesMedida.DescripcionUM = txtDescripcionFA.Text.Trim();
+                    Rpta = Neg_UnidadesMedida.GuardarUM(this.EstadoGuarda, objUnidadesMedida);
                     if (Rpta.Equals("Ok"))
                     {
                         MessageBox.Show("Los Datos Fueron Guardados Correctamente",
@@ -162,7 +162,7 @@ namespace SlnPuntoVenta.Presentacion
                         this.EstadoBotonesPrincipales(true);
                         this.EstadoBotonesProcesos(false);
                         this.EstadoGuarda = 0;
-                        this.ListadoMA("%");
+                        this.ListadoUM("%");
                         tabControlPrincipal.SelectedIndex = 0;
                     }
                     else
@@ -225,11 +225,11 @@ namespace SlnPuntoVenta.Presentacion
                 {
                     string Rpta = "";
                     this.SeleccionarItem();
-                    Rpta = Neg_Marcas.EliminarMA(this.nCodigo);
+                    Rpta = Neg_UnidadesMedida.EliminarUM(this.nCodigo);
 
                     if (Rpta.Equals("Ok"))
                     {
-                        this.ListadoMA("%");
+                        this.ListadoUM("%");
                         MessageBox.Show("El registro a sido eliminado",
                                         "Aviso del Sistema",
                                         MessageBoxButtons.OK,
@@ -251,7 +251,7 @@ namespace SlnPuntoVenta.Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.ListadoMA(txtBuscar.Text.Trim());
+            this.ListadoUM(txtBuscar.Text.Trim());
 
 
         }
@@ -260,9 +260,9 @@ namespace SlnPuntoVenta.Presentacion
         {
             if (dgv_Listado.Rows.Count > 0)
             {
-                Reportes.Form_Rpt_Marcas objReporte = new Reportes.Form_Rpt_Marcas();
-                objReporte.txtParametro1.Text = txtBuscar.Text.Trim();
-                objReporte.ShowDialog();
+                //Reportes.Form_Rpt_Marcas objReporte = new Reportes.Form_Rpt_Marcas();
+                //objReporte.txtParametro1.Text = txtBuscar.Text.Trim();
+                //objReporte.ShowDialog();
             }
         }
 
@@ -274,6 +274,11 @@ namespace SlnPuntoVenta.Presentacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
