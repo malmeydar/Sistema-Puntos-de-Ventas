@@ -110,6 +110,12 @@
     <Compile Include="Reportes\Form_Rpt_Marcas.Designer.cs">
       <DependentUpon>Form_Rpt_Marcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Form_Rpt_UnidadesMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form_Rpt_UnidadesMedida.Designer.cs">
+      <DependentUpon>Form_Rpt_UnidadesMedida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Frm_Rpt_Punto_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,12 +150,16 @@
     <EmbeddedResource Include="Reportes\Form_Rpt_Marcas.resx">
       <DependentUpon>Form_Rpt_Marcas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form_Rpt_UnidadesMedida.resx">
+      <DependentUpon>Form_Rpt_UnidadesMedida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Frm_Rpt_Punto_Venta.resx">
       <DependentUpon>Frm_Rpt_Punto_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Rpt_Familias.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_Marca.rdlc" />
     <EmbeddedResource Include="Reportes\Rpt_PuntoVenta.rdlc" />
+    <EmbeddedResource Include="Reportes\Rpt_UnidadesMedida.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

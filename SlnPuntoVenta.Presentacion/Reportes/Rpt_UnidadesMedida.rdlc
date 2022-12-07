@@ -6,15 +6,15 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.9101cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.83614cm</Width>
+              <Width>7.60646cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.67937cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -26,10 +26,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>CODIGO</Value>
-                              <Style>
-                                <FontSize>9pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -59,23 +56,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PUNTO DE VENTA</Value>
-                              <Style>
-                                <FontSize>9pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontSize>9pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
+                              <Value>UNIDADES DE MEDIDA</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -99,27 +81,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.57354cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="CodigoPV">
+                    <Textbox Name="CodigoUM">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CodigoPV.Value</Value>
-                              <Style>
-                                <FontSize>9pt</FontSize>
-                              </Style>
+                              <Value>=Fields!CodigoUM.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>CodigoPV</rd:DefaultName>
+                      <rd:DefaultName>CodigoUM</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -135,23 +115,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DescripcionPV">
+                    <Textbox Name="DescripcionUM">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DescripcionPV.Value</Value>
-                              <Style>
-                                <FontSize>9pt</FontSize>
-                              </Style>
+                              <Value>=Fields!DescripcionUM.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>DescripcionPV</rd:DefaultName>
+                      <rd:DefaultName>DescripcionUM</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -186,57 +164,30 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.47308cm</Top>
-        <Left>6.95537cm</Left>
-        <Height>1.25291cm</Height>
-        <Width>6.74624cm</Width>
+        <Top>1.39912cm</Top>
+        <Left>5.94886cm</Left>
+        <Height>1.2cm</Height>
+        <Width>10.10646cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Rectangle Name="Rectangle3">
-        <KeepTogether>true</KeepTogether>
-        <Left>0.64514cm</Left>
-        <Height>0.22141cm</Height>
-        <Width>19.79021cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <BackgroundColor>CornflowerBlue</BackgroundColor>
-        </Style>
-      </Rectangle>
-      <Rectangle Name="Rectangle4">
-        <KeepTogether>true</KeepTogether>
-        <Top>4.67276cm</Top>
-        <Left>0.64514cm</Left>
-        <Height>0.22141cm</Height>
-        <Width>19.79021cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-          <BackgroundColor>CornflowerBlue</BackgroundColor>
-        </Style>
-      </Rectangle>
     </ReportItems>
-    <Height>5cm</Height>
+    <Height>4.97354cm</Height>
     <Style />
   </Body>
   <Width>21cm</Width>
   <Page>
     <PageHeader>
-      <Height>2.39099cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
         <Rectangle Name="Rectangle2">
           <KeepTogether>true</KeepTogether>
-          <Left>0.64514cm</Left>
+          <Left>0.6049cm</Left>
           <Height>0.22141cm</Height>
           <Width>19.79021cm</Width>
           <Style>
@@ -250,7 +201,7 @@
           <Source>Embedded</Source>
           <Value>logo</Value>
           <Sizing>FitProportional</Sizing>
-          <Left>3.4925cm</Left>
+          <Left>3.45226cm</Left>
           <Height>1.99071cm</Height>
           <Width>2.00271cm</Width>
           <ZIndex>1</ZIndex>
@@ -260,39 +211,6 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox3">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>="Fecha y Hora de impresion: " &amp; Globals.ExecutionTime</Value>
-                  <Style>
-                    <FontStyle>Italic</FontStyle>
-                    <FontSize>8pt</FontSize>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Left>11.93833cm</Left>
-          <Height>0.6cm</Height>
-          <Width>8.18854cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
         <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -300,7 +218,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE DE PUNTO DE VENTA</Value>
+                  <Value>REPORTE DE UNIDADES DE MEDIDA</Value>
                   <Style>
                     <FontFamily>verdana</FontFamily>
                     <FontSize>12pt</FontSize>
@@ -314,11 +232,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.71438cm</Top>
-          <Left>5.9891cm</Left>
+          <Top>0.35402cm</Top>
+          <Left>5.94886cm</Left>
           <Height>0.6cm</Height>
           <Width>9.66632cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -329,6 +247,33 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Rectangle Name="Rectangle3">
+          <KeepTogether>true</KeepTogether>
+          <Left>0.6049cm</Left>
+          <Height>0.22141cm</Height>
+          <Width>19.79021cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <BackgroundColor>CornflowerBlue</BackgroundColor>
+          </Style>
+        </Rectangle>
+        <Rectangle Name="Rectangle4">
+          <KeepTogether>true</KeepTogether>
+          <Top>2.31859cm</Top>
+          <Left>0.6049cm</Left>
+          <Height>0.22141cm</Height>
+          <Width>19.79021cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <BackgroundColor>CornflowerBlue</BackgroundColor>
+          </Style>
+        </Rectangle>
       </ReportItems>
       <Style>
         <Border>
@@ -337,10 +282,22 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.74625cm</Height>
+      <Height>2.53148cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Rectangle Name="Rectangle5">
+          <KeepTogether>true</KeepTogether>
+          <Left>0.6049cm</Left>
+          <Height>0.22141cm</Height>
+          <Width>19.79021cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <BackgroundColor>CornflowerBlue</BackgroundColor>
+          </Style>
+        </Rectangle>
         <Textbox Name="Textbox5">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -362,9 +319,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Left>14.38993cm</Left>
+          <Top>0.32724cm</Top>
+          <Left>14.34969cm</Left>
           <Height>0.6cm</Height>
           <Width>6.04542cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -384,10 +343,10 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>0cm</LeftMargin>
-    <RightMargin>0cm</RightMargin>
-    <TopMargin>0cm</TopMargin>
-    <BottomMargin>0cm</BottomMargin>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
@@ -398,7 +357,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>221e1856-cfd6-4006-93d7-1b56475cedee</rd:DataSourceID>
+      <rd:DataSourceID>6c87da49-f073-4fa1-8017-b7ee16d1a6bf</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -408,22 +367,22 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="CodigoPV">
-          <DataField>CodigoPV</DataField>
+        <Field Name="CodigoUM">
+          <DataField>CodigoUM</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="DescripcionPV">
-          <DataField>DescripcionPV</DataField>
+        <Field Name="DescripcionUM">
+          <DataField>DescripcionUM</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_DatosMaestros</rd:DataSetName>
         <rd:SchemaPath>D:\Sistemas Punto Venta-Restaurante\SlnSistemaPuntosVentasRestaurante\SlnPuntoVentasRestaurante\SlnPuntoVenta.Presentacion\Reportes\DataSet_DatosMaestros.xsd</rd:SchemaPath>
-        <rd:TableName>USP_LISTADO_PV</rd:TableName>
+        <rd:TableName>USP_LISTADO_UM</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>USP_LISTADO_PVTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>USP_LISTADO_UMTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -458,5 +417,5 @@ kq9UAEQynN91ZpR+r+xGYWI3Er4bRAZhXopTCl6KR0oxLwX6gpfg1gejmC03PCpky1UMWxeIPkDxdpvZ
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>fdc01cc2-84ec-4d8e-b575-d6fbd8b9f7d4</rd:ReportID>
+  <rd:ReportID>4ba7d554-4518-4bbb-abd4-5efa88795a58</rd:ReportID>
 </Report>
