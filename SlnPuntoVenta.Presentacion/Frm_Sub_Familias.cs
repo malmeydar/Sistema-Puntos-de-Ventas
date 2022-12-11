@@ -316,12 +316,12 @@ namespace SlnPuntoVenta.Presentacion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            //if (dgv_Listado.Rows.Count > 0)
-            //{
-            //    Reportes.Form_Rpt_Familia objReporte = new Reportes.Form_Rpt_Familia();
-            //    objReporte.txtParametro1.Text = txtBuscar.Text.Trim();
-            //    objReporte.ShowDialog();
-            //}
+            if (dgv_Listado.Rows.Count > 0)
+            {
+                //Reportes.Form_Rpta_Sub_Familias = new Reportes.Form_Rpta_Sub_Familias();
+                //objReporte.txtParametro1.Text = txtBuscar.Text.Trim();
+                //objReporte.ShowDialog();
+            }
         }
 
         

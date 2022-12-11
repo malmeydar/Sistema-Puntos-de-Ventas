@@ -260,9 +260,9 @@ namespace SlnPuntoVenta.Presentacion
         {
             if (dgv_Listado.Rows.Count > 0)
             {
-                Reportes.Form_Rpt_UnidadesMedida objReporte = new Reportes.Form_Rpt_UnidadesMedida();
-                objReporte.txtParametro1.Text = txtBuscar.Text.Trim();
-                objReporte.ShowDialog();
+                //Reportes.Form_Rpt_UnidadesMedida objReporte = new Reportes.Form_Rpt_UnidadesMedida();
+                //objReporte.txtParametro1.Text = txtBuscar.Text.Trim();
+                //objReporte.ShowDialog();
             }
         }
 
