@@ -17,11 +17,13 @@ namespace SlnPuntoVenta.Negocio
             Dat_Familias datos = new Dat_Familias();
             return datos.ListarFamilias(Ctext);
         }
+
         public static string GuardarFA(int nOpcion, Ent_Familias objFamilia)
         {
             Dat_Familias objGuardarFA = new Dat_Familias();
             return objGuardarFA.GuardarFA(nOpcion, objFamilia);
         }
+
         public static string EliminarFA(int nCodigo)
         {
             Dat_Familias objEliminarFA = new Dat_Familias();

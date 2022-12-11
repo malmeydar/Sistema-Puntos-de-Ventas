@@ -52,7 +52,7 @@ namespace SlnPuntoVenta.Presentacion
 
         private void LimpiarTexto()
         {
-            txtDescripcionFA.Text = "";
+            txtDescripcionSF.Text = "";
 
         }
 
@@ -67,7 +67,7 @@ namespace SlnPuntoVenta.Presentacion
         }
         private void Estado_Texto(bool LEstado)
         {
-            txtDescripcionFA.ReadOnly = !LEstado;
+            txtDescripcionSF.ReadOnly = !LEstado;
            // tabControlPrincipal.Enabled = !LEstado;
 
         }
@@ -89,14 +89,14 @@ namespace SlnPuntoVenta.Presentacion
             }else
             {
                 this.nCodigo = Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoFA"].Value);
-                txtDescripcionFA.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionFA"].Value);
+                txtDescripcionSF.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionFA"].Value);
 
             }
 
         }
 
         #endregion
-        private void Frm_Familias_Load(object sender, EventArgs e)
+        private void Frm_Sub_Familias_Load(object sender, EventArgs e)
         {
             this.ListadoFA("%");
         }
@@ -110,7 +110,7 @@ namespace SlnPuntoVenta.Presentacion
             this.Estado_Texto(true);
             tabControlPrincipal.SelectedIndex = 1;
             
-            txtDescripcionFA.Focus();
+            txtDescripcionSF.Focus();
 
         }
 
@@ -138,7 +138,7 @@ namespace SlnPuntoVenta.Presentacion
         {
             try
             {
-                if (txtDescripcionFA.Text == string.Empty)
+                if (txtDescripcionSF.Text == string.Empty)
                 {
                     MessageBox.Show("Falta ingresar datos requeridos (*)",
                                     "Aviso del Sistema",
@@ -149,7 +149,7 @@ namespace SlnPuntoVenta.Presentacion
                     string Rpta = "";
                     Ent_Familias objFamilia = new Ent_Familias();
                     objFamilia.CodigoFA = this.nCodigo;
-                    objFamilia.DescripcionFA = txtDescripcionFA.Text.Trim();
+                    objFamilia.DescripcionFA = txtDescripcionSF.Text.Trim();
                     Rpta = Neg_Familias.GuardarFA(this.EstadoGuarda, objFamilia);
                     if (Rpta.Equals("Ok"))
                     {
@@ -191,7 +191,7 @@ namespace SlnPuntoVenta.Presentacion
                 this.Estado_Texto(true);
                 this.SeleccionarItem();
                 tabControlPrincipal.SelectedIndex = 1;
-                txtDescripcionFA.Focus();
+                txtDescripcionSF.Focus();
 
 
             }

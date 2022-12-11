@@ -16,7 +16,7 @@ namespace SlnPuntoVenta.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Unidades_Medida());
+            Application.Run(new Frm_Sub_Familias());
         }
     }
 }
