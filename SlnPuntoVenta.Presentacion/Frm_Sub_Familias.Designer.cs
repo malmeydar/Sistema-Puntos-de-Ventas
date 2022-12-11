@@ -30,10 +30,10 @@ namespace SlnPuntoVenta.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Sub_Familias));
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -83,7 +83,7 @@ namespace SlnPuntoVenta.Presentacion
             this.tabControlPrincipal.Location = new System.Drawing.Point(12, 63);
             this.tabControlPrincipal.Name = "tabControlPrincipal";
             this.tabControlPrincipal.SelectedIndex = 0;
-            this.tabControlPrincipal.Size = new System.Drawing.Size(629, 358);
+            this.tabControlPrincipal.Size = new System.Drawing.Size(650, 358);
             this.tabControlPrincipal.TabIndex = 1;
             // 
             // tabPage1
@@ -96,7 +96,7 @@ namespace SlnPuntoVenta.Presentacion
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(621, 320);
+            this.tabPage1.Size = new System.Drawing.Size(642, 320);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consultas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -148,19 +148,19 @@ namespace SlnPuntoVenta.Presentacion
             this.dgv_Listado.AllowUserToAddRows = false;
             this.dgv_Listado.AllowUserToDeleteRows = false;
             this.dgv_Listado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Listado.ColumnHeadersHeight = 35;
             this.dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_Listado.EnableHeadersVisualStyles = false;
@@ -186,7 +186,7 @@ namespace SlnPuntoVenta.Presentacion
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(668, 320);
+            this.tabPage2.Size = new System.Drawing.Size(642, 320);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@ namespace SlnPuntoVenta.Presentacion
             this.PnlListado1.Controls.Add(this.btnBuscar1);
             this.PnlListado1.Controls.Add(this.txtBuscar1);
             this.PnlListado1.Controls.Add(this.label5);
-            this.PnlListado1.Location = new System.Drawing.Point(359, 97);
+            this.PnlListado1.Location = new System.Drawing.Point(359, 88);
             this.PnlListado1.Name = "PnlListado1";
             this.PnlListado1.Size = new System.Drawing.Size(267, 220);
             this.PnlListado1.TabIndex = 10;
@@ -211,19 +211,19 @@ namespace SlnPuntoVenta.Presentacion
             this.dgv_01.AllowUserToAddRows = false;
             this.dgv_01.AllowUserToDeleteRows = false;
             this.dgv_01.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dgv_01.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.dgv_01.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_01.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_01.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_01.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_01.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_01.ColumnHeadersHeight = 35;
             this.dgv_01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_01.EnableHeadersVisualStyles = false;
