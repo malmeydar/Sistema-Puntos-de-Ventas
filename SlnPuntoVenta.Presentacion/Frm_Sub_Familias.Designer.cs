@@ -30,11 +30,11 @@ namespace SlnPuntoVenta.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Sub_Familias));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblTotalRegistros = new System.Windows.Forms.Label();
@@ -43,7 +43,11 @@ namespace SlnPuntoVenta.Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Listado = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.BotonLupa1 = new System.Windows.Forms.Button();
+            this.PnlListado1 = new System.Windows.Forms.Panel();
+            this.dgv_01 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBuscar1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtDescripcionFA = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRetornar = new System.Windows.Forms.Button();
@@ -56,22 +60,19 @@ namespace SlnPuntoVenta.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.btnRetornar1 = new System.Windows.Forms.Button();
+            this.btnBuscar1 = new System.Windows.Forms.Button();
+            this.BotonLupa1 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.PnlListado1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBuscar1 = new System.Windows.Forms.TextBox();
-            this.btnBuscar1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dgv_01 = new System.Windows.Forms.DataGridView();
             this.tabControlPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Listado)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.pnlTitulo.SuspendLayout();
             this.PnlListado1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_01)).BeginInit();
+            this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlPrincipal
@@ -82,7 +83,7 @@ namespace SlnPuntoVenta.Presentacion
             this.tabControlPrincipal.Location = new System.Drawing.Point(12, 63);
             this.tabControlPrincipal.Name = "tabControlPrincipal";
             this.tabControlPrincipal.SelectedIndex = 0;
-            this.tabControlPrincipal.Size = new System.Drawing.Size(637, 358);
+            this.tabControlPrincipal.Size = new System.Drawing.Size(629, 358);
             this.tabControlPrincipal.TabIndex = 1;
             // 
             // tabPage1
@@ -95,7 +96,7 @@ namespace SlnPuntoVenta.Presentacion
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(629, 320);
+            this.tabPage1.Size = new System.Drawing.Size(621, 320);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consultas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -106,7 +107,7 @@ namespace SlnPuntoVenta.Presentacion
             this.lblTotalRegistros.AutoSize = true;
             this.lblTotalRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRegistros.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTotalRegistros.Location = new System.Drawing.Point(501, 284);
+            this.lblTotalRegistros.Location = new System.Drawing.Point(490, 261);
             this.lblTotalRegistros.Name = "lblTotalRegistros";
             this.lblTotalRegistros.Size = new System.Drawing.Size(99, 13);
             this.lblTotalRegistros.TabIndex = 4;
@@ -132,7 +133,6 @@ namespace SlnPuntoVenta.Presentacion
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(266, 20);
             this.txtBuscar.TabIndex = 2;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
             // 
@@ -148,19 +148,19 @@ namespace SlnPuntoVenta.Presentacion
             this.dgv_Listado.AllowUserToAddRows = false;
             this.dgv_Listado.AllowUserToDeleteRows = false;
             this.dgv_Listado.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Listado.ColumnHeadersHeight = 35;
             this.dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_Listado.EnableHeadersVisualStyles = false;
@@ -168,7 +168,7 @@ namespace SlnPuntoVenta.Presentacion
             this.dgv_Listado.Name = "dgv_Listado";
             this.dgv_Listado.ReadOnly = true;
             this.dgv_Listado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv_Listado.Size = new System.Drawing.Size(588, 228);
+            this.dgv_Listado.Size = new System.Drawing.Size(579, 205);
             this.dgv_Listado.TabIndex = 0;
             this.dgv_Listado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Listado_CellDoubleClick);
             // 
@@ -186,21 +186,80 @@ namespace SlnPuntoVenta.Presentacion
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(629, 320);
+            this.tabPage2.Size = new System.Drawing.Size(668, 320);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // BotonLupa1
+            // PnlListado1
             // 
-            this.BotonLupa1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonLupa1.Image = global::SlnPuntoVenta.Presentacion.Properties.Resources.lupa1;
-            this.BotonLupa1.Location = new System.Drawing.Point(359, 55);
-            this.BotonLupa1.Name = "BotonLupa1";
-            this.BotonLupa1.Size = new System.Drawing.Size(27, 27);
-            this.BotonLupa1.TabIndex = 2;
-            this.BotonLupa1.UseVisualStyleBackColor = true;
-            this.BotonLupa1.Visible = false;
+            this.PnlListado1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PnlListado1.Controls.Add(this.btnRetornar1);
+            this.PnlListado1.Controls.Add(this.dgv_01);
+            this.PnlListado1.Controls.Add(this.label6);
+            this.PnlListado1.Controls.Add(this.btnBuscar1);
+            this.PnlListado1.Controls.Add(this.txtBuscar1);
+            this.PnlListado1.Controls.Add(this.label5);
+            this.PnlListado1.Location = new System.Drawing.Point(359, 97);
+            this.PnlListado1.Name = "PnlListado1";
+            this.PnlListado1.Size = new System.Drawing.Size(267, 220);
+            this.PnlListado1.TabIndex = 10;
+            this.PnlListado1.Visible = false;
+            // 
+            // dgv_01
+            // 
+            this.dgv_01.AllowUserToAddRows = false;
+            this.dgv_01.AllowUserToDeleteRows = false;
+            this.dgv_01.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgv_01.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_01.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_01.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_01.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_01.ColumnHeadersHeight = 35;
+            this.dgv_01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_01.EnableHeadersVisualStyles = false;
+            this.dgv_01.Location = new System.Drawing.Point(6, 84);
+            this.dgv_01.Name = "dgv_01";
+            this.dgv_01.ReadOnly = true;
+            this.dgv_01.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_01.Size = new System.Drawing.Size(254, 124);
+            this.dgv_01.TabIndex = 13;
+            this.dgv_01.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_01_CellDoubleClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 15);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "LISTADO DE FAMILIAS";
+            // 
+            // txtBuscar1
+            // 
+            this.txtBuscar1.Location = new System.Drawing.Point(46, 44);
+            this.txtBuscar1.Name = "txtBuscar1";
+            this.txtBuscar1.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar1.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Buscar";
             // 
             // txtDescripcionFA
             // 
@@ -343,6 +402,40 @@ namespace SlnPuntoVenta.Presentacion
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
+            // btnRetornar1
+            // 
+            this.btnRetornar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetornar1.Image = global::SlnPuntoVenta.Presentacion.Properties.Resources.retornar;
+            this.btnRetornar1.Location = new System.Drawing.Point(185, 37);
+            this.btnRetornar1.Name = "btnRetornar1";
+            this.btnRetornar1.Size = new System.Drawing.Size(27, 27);
+            this.btnRetornar1.TabIndex = 14;
+            this.btnRetornar1.UseVisualStyleBackColor = true;
+            this.btnRetornar1.Click += new System.EventHandler(this.btnRetornar1_Click);
+            // 
+            // btnBuscar1
+            // 
+            this.btnBuscar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar1.Image = global::SlnPuntoVenta.Presentacion.Properties.Resources.lupa1;
+            this.btnBuscar1.Location = new System.Drawing.Point(152, 37);
+            this.btnBuscar1.Name = "btnBuscar1";
+            this.btnBuscar1.Size = new System.Drawing.Size(27, 27);
+            this.btnBuscar1.TabIndex = 11;
+            this.btnBuscar1.UseVisualStyleBackColor = true;
+            this.btnBuscar1.Click += new System.EventHandler(this.btnBuscar1_Click);
+            // 
+            // BotonLupa1
+            // 
+            this.BotonLupa1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonLupa1.Image = global::SlnPuntoVenta.Presentacion.Properties.Resources.lupa1;
+            this.BotonLupa1.Location = new System.Drawing.Point(359, 55);
+            this.BotonLupa1.Name = "BotonLupa1";
+            this.BotonLupa1.Size = new System.Drawing.Size(27, 27);
+            this.BotonLupa1.TabIndex = 2;
+            this.BotonLupa1.UseVisualStyleBackColor = true;
+            this.BotonLupa1.Visible = false;
+            this.BotonLupa1.Click += new System.EventHandler(this.BotonLupa1_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(253)))), ((int)(((byte)(252)))));
@@ -394,84 +487,6 @@ namespace SlnPuntoVenta.Presentacion
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // PnlListado1
-            // 
-            this.PnlListado1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PnlListado1.Controls.Add(this.dgv_01);
-            this.PnlListado1.Controls.Add(this.label6);
-            this.PnlListado1.Controls.Add(this.btnBuscar1);
-            this.PnlListado1.Controls.Add(this.txtBuscar1);
-            this.PnlListado1.Controls.Add(this.label5);
-            this.PnlListado1.Location = new System.Drawing.Point(359, 97);
-            this.PnlListado1.Name = "PnlListado1";
-            this.PnlListado1.Size = new System.Drawing.Size(267, 220);
-            this.PnlListado1.TabIndex = 10;
-            this.PnlListado1.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Buscar";
-            // 
-            // txtBuscar1
-            // 
-            this.txtBuscar1.Location = new System.Drawing.Point(46, 44);
-            this.txtBuscar1.Name = "txtBuscar1";
-            this.txtBuscar1.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscar1.TabIndex = 1;
-            // 
-            // btnBuscar1
-            // 
-            this.btnBuscar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar1.Image = global::SlnPuntoVenta.Presentacion.Properties.Resources.lupa1;
-            this.btnBuscar1.Location = new System.Drawing.Point(152, 37);
-            this.btnBuscar1.Name = "btnBuscar1";
-            this.btnBuscar1.Size = new System.Drawing.Size(27, 27);
-            this.btnBuscar1.TabIndex = 11;
-            this.btnBuscar1.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "LISTADO DE FAMILIAS";
-            // 
-            // dgv_01
-            // 
-            this.dgv_01.AllowUserToAddRows = false;
-            this.dgv_01.AllowUserToDeleteRows = false;
-            this.dgv_01.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgv_01.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_01.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgv_01.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(145)))), ((int)(((byte)(194)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_01.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_01.ColumnHeadersHeight = 35;
-            this.dgv_01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_01.EnableHeadersVisualStyles = false;
-            this.dgv_01.Location = new System.Drawing.Point(6, 84);
-            this.dgv_01.Name = "dgv_01";
-            this.dgv_01.ReadOnly = true;
-            this.dgv_01.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv_01.Size = new System.Drawing.Size(254, 124);
-            this.dgv_01.TabIndex = 13;
-            // 
             // Frm_Sub_Familias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,11 +508,11 @@ namespace SlnPuntoVenta.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Listado)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
             this.PnlListado1.ResumeLayout(false);
             this.PnlListado1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_01)).EndInit();
+            this.pnlTitulo.ResumeLayout(false);
+            this.pnlTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -534,5 +549,6 @@ namespace SlnPuntoVenta.Presentacion
         private System.Windows.Forms.Button btnBuscar1;
         private System.Windows.Forms.TextBox txtBuscar1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRetornar1;
     }
 }
