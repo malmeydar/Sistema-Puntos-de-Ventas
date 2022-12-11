@@ -107,6 +107,7 @@ namespace SlnPuntoVenta.Presentacion
             btnCancelar.Visible = estado;
             btnGuardar.Visible = estado;
             btnRetornar.Visible = !estado;
+            BotonLupa1.Visible = estado;
 
         }
 
@@ -136,8 +137,8 @@ namespace SlnPuntoVenta.Presentacion
             }
             else
             {
-                txtDescripcionFA.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionFA"].Value);
-                this.nCodigoFa = Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoFA"].Value);
+                txtDescripcionFA.Text = Convert.ToString(dgv_01.CurrentRow.Cells["DescripcionFA"].Value);
+                this.nCodigoFa = Convert.ToInt32(dgv_01.CurrentRow.Cells["CodigoFA"].Value);
             }
 
         }
@@ -348,6 +349,7 @@ namespace SlnPuntoVenta.Presentacion
         private void BotonLupa1_Click(object sender, EventArgs e)
         {
             PnlListado1.Visible = true;
+            PnlListado1.Location = BotonLupa1.Location;
             txtBuscar1.Focus();
 
         }
