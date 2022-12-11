@@ -187,12 +187,13 @@ namespace SlnPuntoVenta.Presentacion
         {
             try
             {
-                if (txtDescripcionSF.Text == string.Empty && txtDescripcionFA.Text== string.Empty)
+                if (txtDescripcionSF.Text == string.Empty || txtDescripcionFA.Text== string.Empty)
                 {
                     MessageBox.Show("Falta ingresar datos requeridos (*)",
                                     "Aviso del Sistema",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Exclamation);
+                    txtDescripcionSF.Focus();
                 }else
                 {
                     string Rpta = "";
@@ -334,6 +335,7 @@ namespace SlnPuntoVenta.Presentacion
         {
             this.SeleccionarItemFA();
             PnlListado1.Visible = false;
+            txtDescripcionSF.Focus();
         }
 
         private void btnRetornar1_Click(object sender, EventArgs e)
