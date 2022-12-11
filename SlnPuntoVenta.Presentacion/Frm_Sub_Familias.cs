@@ -21,23 +21,28 @@ namespace SlnPuntoVenta.Presentacion
         #region "Mis variables Globales"
         int EstadoGuarda = 0;
         int nCodigo = 0;
+        int nCodigoFa = 0;
 
         #endregion
 
         #region "Mis Metodos"
-        private void FormatoDGVPV()
+        private void FormatoDGVSF()
         {
             dgv_Listado.Columns[0].Width = 100;
-            dgv_Listado.Columns[0].HeaderText = "CODIGO FA";
+            dgv_Listado.Columns[0].HeaderText = "CODIGO SF";
             dgv_Listado.Columns[1].Width = 350;
-            dgv_Listado.Columns[1].HeaderText = "FAMILIA";
+            dgv_Listado.Columns[1].HeaderText = "SUB FAMILIA";
+            dgv_Listado.Columns[2].Width = 350;
+            dgv_Listado.Columns[2].HeaderText = "FAMILIA";
+            dgv_Listado.Columns[3].Visible = false;
+
         }
-        private void ListadoFA(string Ctext)
+        private void ListadoSF(string Ctext)
         {
             try
             {
-                dgv_Listado.DataSource = Neg_Familias.ListarFamilias(Ctext);
-                this.FormatoDGVPV();
+                dgv_Listado.DataSource = Neg_Sub_Familias.ListarSubFamilias(Ctext);
+                this.FormatoDGVSF();
                 lblTotalRegistros.Text = "Total de registros: " + dgv_Listado.Rows.Count.ToString();
 
 
@@ -53,6 +58,7 @@ namespace SlnPuntoVenta.Presentacion
         private void LimpiarTexto()
         {
             txtDescripcionSF.Text = "";
+            txtDescripcionFA.Text = "";
 
         }
 
@@ -81,16 +87,17 @@ namespace SlnPuntoVenta.Presentacion
 
         private void SeleccionarItem()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dgv_Listado.CurrentRow.Cells["CodigoFA"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dgv_Listado.CurrentRow.Cells["CodigoSF"].Value)))
             {
                 MessageBox.Show("Seleciona un registro..!", "Aviso del Sistema", 
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
             }else
             {
-                this.nCodigo = Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoFA"].Value);
-                txtDescripcionSF.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionFA"].Value);
-
+                this.nCodigo = Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoSF"].Value);
+                txtDescripcionSF.Text = Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionSF"].Value);
+                txtDescripcionFA.Text= Convert.ToString(dgv_Listado.CurrentRow.Cells["DescripcionFA"].Value);
+                this.nCodigoFa= Convert.ToInt32(dgv_Listado.CurrentRow.Cells["CodigoFA"].Value);
             }
 
         }
@@ -98,7 +105,7 @@ namespace SlnPuntoVenta.Presentacion
         #endregion
         private void Frm_Sub_Familias_Load(object sender, EventArgs e)
         {
-            this.ListadoFA("%");
+            this.ListadoSF("%");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
