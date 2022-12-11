@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Sub_Familias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Sub_Familias.Designer.cs">
+      <DependentUpon>Frm_Sub_Familias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Unidades_Medida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
       <DependentUpon>Frm_Rpt_Punto_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Frm_Sub_Familias.resx">
+      <DependentUpon>Frm_Sub_Familias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Unidades_Medida.resx">
       <DependentUpon>Frm_Unidades_Medida.cs</DependentUpon>
     </EmbeddedResource>
